@@ -77,7 +77,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-ivory/60 via-transparent to-ivory/60" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pb-32">
         {/* Decorative Element */}
         <div
           ref={decorRef}
@@ -116,29 +116,29 @@ const HeroSection = () => {
             — Bình Ngô Đại Cáo
           </cite>
         </div>
+      </div>
 
-        {/* Scroll Indicator */}
-        <div
-          ref={scrollRef}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      {/* Scroll Indicator - Positioned outside content container */}
+      <div
+        ref={scrollRef}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+      >
+        <span className="font-sans text-xs text-ink-light tracking-widest uppercase bg-ivory/90 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">
+          Cuộn xuống
+        </span>
+        <svg
+          className="w-6 h-6 text-burgundy"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          <span className="font-sans text-xs text-ink-light tracking-widest uppercase bg-ivory/70 px-3 py-1 rounded-full backdrop-blur-sm">
-            Cuộn xuống
-          </span>
-          <svg
-            className="w-6 h-6 text-burgundy"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
       </div>
     </section>
   );
