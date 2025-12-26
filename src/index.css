@@ -2,95 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 40 30% 96%;
+    --foreground: 20 20% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 25% 92%;
+    --card-foreground: 20 20% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 30% 96%;
+    --popover-foreground: 20 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 45% 35%;
+    --primary-foreground: 40 30% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 25% 88%;
+    --secondary-foreground: 20 20% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 20 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 38 70% 50%;
+    --accent-foreground: 20 20% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 0 45% 35%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom design tokens */
+    --burgundy: 0 45% 35%;
+    --burgundy-light: 0 40% 45%;
+    --gold: 38 70% 50%;
+    --gold-light: 40 65% 65%;
+    --ivory: 40 30% 96%;
+    --cream: 40 25% 92%;
+    --ink: 20 20% 15%;
+    --ink-light: 20 15% 35%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Noto Serif', serif;
+    --font-sans: 'Source Sans 3', sans-serif;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --shadow-soft: 0 4px 20px -2px hsl(20 20% 15% / 0.08);
+    --shadow-glow: 0 0 40px hsl(38 70% 50% / 0.15);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 20 20% 8%;
+    --foreground: 40 25% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 20 18% 12%;
+    --card-foreground: 40 25% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 20 20% 8%;
+    --popover-foreground: 40 25% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 38 70% 55%;
+    --primary-foreground: 20 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 20 15% 18%;
+    --secondary-foreground: 40 25% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 20 15% 20%;
+    --muted-foreground: 40 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 40% 45%;
+    --accent-foreground: 40 25% 92%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 20 15% 25%;
+    --input: 20 15% 25%;
+    --ring: 38 70% 55%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --burgundy: 0 40% 50%;
+    --burgundy-light: 0 38% 60%;
+    --gold: 38 70% 55%;
+    --gold-light: 40 60% 70%;
+    --ivory: 40 20% 12%;
+    --cream: 20 18% 16%;
+    --ink: 40 25% 92%;
+    --ink-light: 40 20% 70%;
   }
 }
 
@@ -99,7 +96,95 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .section-reveal {
+    @apply opacity-0 translate-y-12;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-burgundy to-gold;
+  }
+
+  .decorative-line {
+    @apply h-px bg-gradient-to-r from-transparent via-burgundy/40 to-transparent;
+  }
+
+  .quote-block {
+    @apply relative pl-6 border-l-2 border-gold italic;
+    font-family: var(--font-display);
+  }
+
+  .chapter-number {
+    font-family: var(--font-display);
+    @apply text-8xl font-light text-burgundy/20 absolute -left-4 -top-8;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .text-burgundy {
+    color: hsl(var(--burgundy));
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-ink {
+    color: hsl(var(--ink));
+  }
+
+  .text-ink-light {
+    color: hsl(var(--ink-light));
+  }
+
+  .bg-burgundy {
+    background-color: hsl(var(--burgundy));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .bg-ivory {
+    background-color: hsl(var(--ivory));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  .border-burgundy {
+    border-color: hsl(var(--burgundy));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
   }
 }
