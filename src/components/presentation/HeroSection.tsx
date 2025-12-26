@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import heroLandscape from '@/assets/hero-landscape.jpg';
 
 const HeroSection = () => {
   const containerRef = useRef<HTMLElement>(null);
@@ -7,16 +8,23 @@ const HeroSection = () => {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const decorRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       tl.fromTo(
-        decorRef.current,
-        { scaleX: 0, opacity: 0 },
-        { scaleX: 1, opacity: 1, duration: 1.2 }
+        imageRef.current,
+        { opacity: 0, scale: 1.1 },
+        { opacity: 1, scale: 1, duration: 1.5 }
       )
+        .fromTo(
+          decorRef.current,
+          { scaleX: 0, opacity: 0 },
+          { scaleX: 1, opacity: 1, duration: 1.2 },
+          '-=0.8'
+        )
         .fromTo(
           titleRef.current,
           { opacity: 0, y: 60 },
@@ -52,20 +60,22 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-ivory"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23722F37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
+      {/* Hero Background Image */}
+      <div
+        ref={imageRef}
+        className="absolute inset-0 z-0"
+      >
+        <img
+          src={heroLandscape}
+          alt="Tranh thủy mặc núi Lam Sơn với hình ảnh học giả"
+          className="w-full h-full object-cover"
         />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/70 via-ivory/50 to-ivory" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory/60 via-transparent to-ivory/60" />
       </div>
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ivory/50 to-ivory" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         {/* Decorative Element */}
@@ -79,7 +89,7 @@ const HeroSection = () => {
           ref={titleRef}
           className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-ink leading-tight mb-8"
         >
-          <span className="block text-burgundy mb-2">Tư Tưởng Nhân Nghĩa</span>
+          <span className="block text-burgundy mb-2 drop-shadow-sm">Tư Tưởng Nhân Nghĩa</span>
           <span className="block text-2xl md:text-3xl lg:text-4xl font-normal text-ink-light mt-4">
             Trong Thơ Văn Nguyễn Trãi
           </span>
@@ -96,8 +106,8 @@ const HeroSection = () => {
         </p>
 
         {/* Decorative Quote */}
-        <div className="mt-16 max-w-2xl mx-auto">
-          <blockquote className="font-display text-xl md:text-2xl italic text-burgundy/80">
+        <div className="mt-16 max-w-2xl mx-auto bg-ivory/80 backdrop-blur-sm rounded-lg p-6 border border-burgundy/10">
+          <blockquote className="font-display text-xl md:text-2xl italic text-burgundy/90">
             "Việc nhân nghĩa cốt ở yên dân,
             <br />
             Quân điếu phạt trước lo trừ bạo."
@@ -112,7 +122,7 @@ const HeroSection = () => {
           ref={scrollRef}
           className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="font-sans text-xs text-ink-light tracking-widest uppercase">
+          <span className="font-sans text-xs text-ink-light tracking-widest uppercase bg-ivory/70 px-3 py-1 rounded-full backdrop-blur-sm">
             Cuộn xuống
           </span>
           <svg

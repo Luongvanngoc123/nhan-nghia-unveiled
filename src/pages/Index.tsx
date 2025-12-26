@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import ProgressBar from '@/components/presentation/ProgressBar';
 import HeroSection from '@/components/presentation/HeroSection';
 import TableOfContents from '@/components/presentation/TableOfContents';
 import ContentSection from '@/components/presentation/ContentSection';
@@ -23,6 +24,9 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-ivory">
+      {/* Progress Bar */}
+      <ProgressBar />
+
       {/* Hero */}
       <HeroSection />
 
