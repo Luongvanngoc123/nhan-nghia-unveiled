@@ -1,5 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { animate, onScroll } from 'animejs';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface QuoteCardProps {
   quote: string;
@@ -9,57 +12,34 @@ interface QuoteCardProps {
 
 const QuoteCard = ({ quote, source, translation }: QuoteCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const quoteRef = useRef<HTMLQuoteElement>(null);
 
   useEffect(() => {
-    if (!cardRef.current || !quoteRef.current) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0, scale: 0.95, y: 30 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }, cardRef);
 
-    // Card entrance animation
-    const cardAnimation = animate(cardRef.current, {
-      opacity: [0, 1],
-      scale: [0.9, 1],
-      translateY: [40, 0],
-      duration: 800,
-      ease: 'outExpo',
-      autoplay: onScroll({
-        target: cardRef.current,
-        enter: 'bottom 85%',
-        leave: 'top 15%',
-      }),
-    });
-
-    // Quote text staggered animation
-    const words = quoteRef.current.querySelectorAll('.quote-word');
-    const wordsAnimation = animate(words, {
-      opacity: [0, 1],
-      translateY: [20, 0],
-      duration: 600,
-      delay: (_el: Element, i: number) => 200 + i * 50,
-      ease: 'outQuad',
-      autoplay: onScroll({
-        target: cardRef.current,
-        enter: 'bottom 80%',
-        leave: 'top 20%',
-      }),
-    });
-
-    return () => {
-      cardAnimation.pause();
-      wordsAnimation.pause();
-    };
+    return () => ctx.revert();
   }, []);
-
-  // Split quote into words for staggered animation
-  const quoteWords = quote.split(' ').map((word, i) => (
-    <span key={i} className="quote-word inline-block mr-[0.3em]">
-      {word}
-    </span>
-  ));
 
   return (
     <div
       ref={cardRef}
-      className="my-12 relative bg-gradient-to-br from-cream to-ivory rounded-lg p-8 md:p-10 shadow-[var(--shadow-soft)] border border-burgundy/10 opacity-0"
+      className="my-12 relative bg-gradient-to-br from-cream to-ivory rounded-lg p-8 md:p-10 shadow-[var(--shadow-soft)] border border-burgundy/10"
     >
       {/* Decorative Quote Mark */}
       <svg
@@ -70,11 +50,8 @@ const QuoteCard = ({ quote, source, translation }: QuoteCardProps) => {
         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
       </svg>
 
-      <blockquote
-        ref={quoteRef}
-        className="font-display text-xl md:text-2xl text-burgundy italic leading-relaxed"
-      >
-        {quoteWords}
+      <blockquote className="font-display text-xl md:text-2xl text-burgundy italic leading-relaxed">
+        {quote}
       </blockquote>
 
       {translation && (
