@@ -1,5 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { animate, onScroll } from 'animejs';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface KeyPointCardProps {
   number: number;
@@ -10,55 +13,36 @@ interface KeyPointCardProps {
 
 const KeyPointCard = ({ number, title, description, delay = 0 }: KeyPointCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const numberRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (!cardRef.current) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay: delay * 0.15,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }, cardRef);
 
-    // Card entrance animation with anime.js scroll
-    const cardAnimation = animate(cardRef.current, {
-      opacity: [0, 1],
-      translateY: [60, 0],
-      rotate: [2, 0],
-      duration: 700,
-      delay: delay * 150,
-      ease: 'outBack',
-      autoplay: onScroll({
-        target: cardRef.current,
-        enter: 'bottom 85%',
-        leave: 'top 15%',
-      }),
-    });
-
-    // Number animation
-    const numberAnimation = numberRef.current && animate(numberRef.current, {
-      scale: [0, 1],
-      opacity: [0, 0.2],
-      duration: 600,
-      delay: delay * 150 + 200,
-      ease: 'outElastic(1, .5)',
-      autoplay: onScroll({
-        target: cardRef.current,
-        enter: 'bottom 85%',
-        leave: 'top 15%',
-      }),
-    });
-
-    return () => {
-      cardAnimation.pause();
-      if (numberAnimation) numberAnimation.pause();
-    };
+    return () => ctx.revert();
   }, [delay]);
 
   return (
     <div
       ref={cardRef}
-      className="group relative bg-ivory rounded-lg p-6 border border-border hover:border-burgundy/30 transition-all duration-300 hover:shadow-[var(--shadow-soft)] opacity-0"
+      className="group relative bg-ivory rounded-lg p-6 border border-border hover:border-burgundy/30 transition-all duration-300 hover:shadow-[var(--shadow-soft)]"
     >
-      <span
-        ref={numberRef}
-        className="font-display text-5xl font-light text-burgundy/20 group-hover:text-burgundy/40 transition-colors opacity-0"
-      >
+      <span className="font-display text-5xl font-light text-burgundy/20 group-hover:text-burgundy/40 transition-colors">
         {String(number).padStart(2, '0')}
       </span>
       <h4 className="font-display text-xl text-ink mt-2 group-hover:text-burgundy transition-colors">
