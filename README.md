@@ -1,69 +1,70 @@
-📖 Project Canvas: Báo Cáo Văn Học Kỹ Thuật Số
-Dự án này là một nền tảng báo cáo văn học hiện đại, kết hợp giữa phân tích nội dung chuyên sâu và trải nghiệm web trực quan. Được xây dựng để chuyển đổi các bài luận truyền thống thành trải nghiệm đọc tương tác.
-🔗 Liên Kết Quan Trọng
-🌐 Website Chính Thức: thuyettrinh.khanhwiee.site
-🖼️ Bảng Tóm Tắt Dự Án (The Canvas)
-Mục Tiêu (Goals)
-Nội Dung (Core Content)
-Đối Tượng (Target)
-• Số hóa các bài phân tích văn học.
+<div align="center">
 
-• Tăng tính tương tác trực quan.
+📖 BÁO CÁO VĂN HỌC KỸ THUẬT SỐ
 
-• Tối ưu hóa việc trình bày báo cáo.
-• Phân tích nhân vật & bối cảnh.
+Nền tảng trình bày báo cáo hiện đại – Trực quan – Tương tác
 
-• Ý nghĩa tư tưởng của tác phẩm.
+🌐 Website Chính Thức • 📑 Nội Dung Mẫu • 🛠 Hướng Dẫn
 
-• Sơ đồ tư duy & hình ảnh minh họa.
-• Giáo viên & Hội đồng giám khảo.
+</div>
 
-• Học sinh & sinh viên.
+🌟 Giới Thiệu
 
-• Cộng đồng yêu văn học.
+Dự án này là một bước tiến mới trong việc trình bày các bài luận văn học. Thay vì những tệp văn bản khô khan, chúng tôi chuyển đổi nội dung thành một trải nghiệm web tương tác, giúp người đọc dễ dàng tiếp cận các phân tích chuyên sâu thông qua giao diện trực quan và sinh động.
 
+🖼️ Project Canvas (Tóm Tắt Dự Án)
 
-Công Nghệ (Technology)
-Kênh Truyền Tải (Channels)
-Lợi Thế (Advantages)
-• React, TypeScript, Tailwind CSS.
-
-• Giao diện UI từ shadcn-ui.
-
-• Hạ tầng Lovable & Vite.
-• Website (Web-app).
-
-• Mã nguồn GitHub.
-
-• Tương thích trên cả Mobile/PC.
-• Tốc độ tải trang cực nhanh.
-
-• Thiết kế hiện đại, tinh tế.
-
-• Dễ dàng cập nhật nội dung.
-
-🛠️ Hướng Dẫn Chỉnh Sửa
-Bạn có thể thay đổi nội dung bài báo cáo theo 2 cách chính:
-1. Sử dụng Lovable (Khuyên dùng)
-Truy cập trực tiếp vào dự án trên giao diện Lovable để chỉnh sửa bằng AI hoặc kéo thả. Mọi thay đổi sẽ được đồng bộ hóa ngay lập tức với kho lưu trữ này.
-2. Chỉnh sửa bằng IDE (Dành cho nhà phát triển)
-Nếu bạn muốn làm việc trên máy tính cá nhân (VS Code), hãy làm theo các bước:
-# 1. Sao chép kho lưu trữ
-git clone <URL_GIT_CỦA_BẠN>
-
-# 2. Truy cập vào thư mục dự án
-cd literature-report-project
-
-# 3. Cài đặt các thư viện
-npm install
-
-# 4. Chạy môi trường phát triển (Preview)
-npm run dev
-
-⚙️ Công Nghệ Sử Dụng
-Vite: Công cụ đóng gói cực nhanh.
-React & TypeScript: Xây dựng cấu trúc trang linh hoạt và an toàn.
-Tailwind CSS: Tối ưu hóa phong cách trình bày đẹp mắt.
-shadcn-ui: Các thành phần giao diện chuẩn mực.
-Người thực hiện: [Tên của bạn]
-Trạng thái: Đang hoàn thiện (In Progress)
+<table width="100%">
+<tr>
+<td width="33%" valign="top">
+<h3>🎯 Mục Tiêu</h3>
+<ul>
+<li>Số hóa bài phân tích.</li>
+<li>Tăng tính tương tác.</li>
+<li>Tối ưu hóa trình bày.</li>
+</ul>
+</td>
+<td width="33%" valign="top">
+<h3>📝 Nội Dung Lõi</h3>
+<ul>
+<li>Phân tích nhân vật.</li>
+<li>Bối cảnh lịch sử.</li>
+<li>Sơ đồ tư duy/Hình ảnh.</li>
+</ul>
+</td>
+<td width="33%" valign="top">
+<h3>👥 Đối Tượng</h3>
+<ul>
+<li>Giáo viên & Giám khảo.</li>
+<li>Học sinh & Sinh viên.</li>
+<li>Người yêu văn học.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<h3>💻 Công Nghệ</h3>
+<ul>
+<li>React & TypeScript.</li>
+<li>shadcn/ui & Tailwind.</li>
+<li>Lovable & Vite.</li>
+</ul>
+</td>
+<td width="33%" valign="top">
+<h3>📡 Kênh Truyền Tải</h3>
+<ul>
+<li>Web-app chính thức.</li>
+<li>Kho lưu trữ GitHub.</li>
+<li>Hỗ trợ đa thiết bị.</li>
+</ul>
+</td>
+<td width="33%" valign="top">
+<h3>🚀 Lợi Thế</h3>
+<ul>
+<li>Tải trang siêu tốc.</li>
+<li>Thiết kế tinh tế.</li>
+<li>Cập nhật linh hoạt.</li>
+</ul>
+</td>
+</tr>
+</table>
