@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+📖 Project Canvas: Báo Cáo Văn Học Kỹ Thuật Số
+Dự án này là một nền tảng báo cáo văn học hiện đại, kết hợp giữa phân tích nội dung chuyên sâu và trải nghiệm web trực quan. Được xây dựng để chuyển đổi các bài luận truyền thống thành trải nghiệm đọc tương tác.
+🔗 Liên Kết Quan Trọng
+🌐 Website Chính Thức: thuyettrinh.khanhwiee.site
+🖼️ Bảng Tóm Tắt Dự Án (The Canvas)
+Mục Tiêu (Goals)
+Nội Dung (Core Content)
+Đối Tượng (Target)
+• Số hóa các bài phân tích văn học.
 
-## Project info
+• Tăng tính tương tác trực quan.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+• Tối ưu hóa việc trình bày báo cáo.
+• Phân tích nhân vật & bối cảnh.
 
-## How can I edit this code?
+• Ý nghĩa tư tưởng của tác phẩm.
 
-There are several ways of editing your application.
+• Sơ đồ tư duy & hình ảnh minh họa.
+• Giáo viên & Hội đồng giám khảo.
 
-**Use Lovable**
+• Học sinh & sinh viên.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+• Cộng đồng yêu văn học.
 
-Changes made via Lovable will be committed automatically to this repo.
 
-**Use your preferred IDE**
+Công Nghệ (Technology)
+Kênh Truyền Tải (Channels)
+Lợi Thế (Advantages)
+• React, TypeScript, Tailwind CSS.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+• Giao diện UI từ shadcn-ui.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+• Hạ tầng Lovable & Vite.
+• Website (Web-app).
 
-Follow these steps:
+• Mã nguồn GitHub.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+• Tương thích trên cả Mobile/PC.
+• Tốc độ tải trang cực nhanh.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+• Thiết kế hiện đại, tinh tế.
 
-# Step 3: Install the necessary dependencies.
-npm i
+• Dễ dàng cập nhật nội dung.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+🛠️ Hướng Dẫn Chỉnh Sửa
+Bạn có thể thay đổi nội dung bài báo cáo theo 2 cách chính:
+1. Sử dụng Lovable (Khuyên dùng)
+Truy cập trực tiếp vào dự án trên giao diện Lovable để chỉnh sửa bằng AI hoặc kéo thả. Mọi thay đổi sẽ được đồng bộ hóa ngay lập tức với kho lưu trữ này.
+2. Chỉnh sửa bằng IDE (Dành cho nhà phát triển)
+Nếu bạn muốn làm việc trên máy tính cá nhân (VS Code), hãy làm theo các bước:
+# 1. Sao chép kho lưu trữ
+git clone <URL_GIT_CỦA_BẠN>
+
+# 2. Truy cập vào thư mục dự án
+cd literature-report-project
+
+# 3. Cài đặt các thư viện
+npm install
+
+# 4. Chạy môi trường phát triển (Preview)
 npm run dev
-```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+⚙️ Công Nghệ Sử Dụng
+Vite: Công cụ đóng gói cực nhanh.
+React & TypeScript: Xây dựng cấu trúc trang linh hoạt và an toàn.
+Tailwind CSS: Tối ưu hóa phong cách trình bày đẹp mắt.
+shadcn-ui: Các thành phần giao diện chuẩn mực.
+Người thực hiện: [Tên của bạn]
+Trạng thái: Đang hoàn thiện (In Progress)
