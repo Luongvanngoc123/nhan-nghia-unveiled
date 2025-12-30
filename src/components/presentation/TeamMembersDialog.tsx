@@ -22,13 +22,13 @@ const teamData: TeamSection[] = [
     title: "Phần 1: Mở đầu và Tiểu sử",
     members: [
       { name: "Đinh Thị Ánh Tuyết", task: "Viết Mở đầu (lí do chọn đề tài, vị trí Nguyễn Trãi)" },
-      { name: "Nguyễn Văn Nam", task: "Viết Tiểu sử (năm sinh – gia đình – Lam Sơn – Lệ Chi Viên – minh oan)" },
+      { name: "Nguyễn Văn Nam", task: "Viết Tiểu sử (năm sinh - gia đình - Lam Sơn - Lệ Chi Viên - minh oan)" },
     ],
   },
   {
     title: "Phần 2: Yêu nước và Chống xâm lăng",
     members: [
-      { name: "Trần Thị Ni Na", task: "Phân tích khái niệm 'Nhân nghĩa, yêu nước, trừ bạo'" },
+      { name: "Trần Thị Ni Na", task: "Phân tích khái niệm Nhân nghĩa, yêu nước, trừ bạo" },
       { name: "Lương Văn Ngọc", task: "Sưu tầm dẫn chứng Bình Ngô đại cáo (phiên âm + dịch)" },
     ],
   },
@@ -36,7 +36,7 @@ const teamData: TeamSection[] = [
     title: "Phần 3: Thân dân, Lấy dân làm gốc",
     members: [
       { name: "Phạm Thị Tươi", task: "Phân tích tư tưởng trọng dân, thương dân" },
-      { name: "Đinh Ngọc Như Ý", task: "Tìm thơ/dẫn chứng về dân (Quốc âm thi tập, Quan hải)" },
+      { name: "Đinh Ngọc Như Ý", task: "Tìm thơ, dẫn chứng về dân (Quốc âm thi tập, Quan hải)" },
     ],
   },
   {
