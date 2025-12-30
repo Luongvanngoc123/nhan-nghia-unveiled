@@ -57,9 +57,9 @@ export default {
         "ink-light": "hsl(var(--ink-light))",
       },
       fontFamily: {
-        display: ['Cormorant Garamond', 'serif'],
-        body: ['Noto Serif', 'serif'],
-        sans: ['Source Sans 3', 'sans-serif'],
+        display: ["Noto Serif", "serif"],
+        body: ["Noto Serif", "serif"],
+        sans: ["Source Sans 3", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
