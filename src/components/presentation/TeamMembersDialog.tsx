@@ -96,10 +96,10 @@ const TeamMembersDialog = () => {
                     key={memberIndex}
                     className="bg-parchment/50 dark:bg-ink/50 rounded-lg p-3 border border-burgundy/10"
                   >
-                    <p className="font-serif font-semibold text-ink dark:text-ivory">
+                    <p className="font-body font-semibold text-ink dark:text-ivory">
                       {member.name}
                     </p>
-                    <p className="font-serif text-sm text-ink/70 dark:text-ivory/70 mt-1">
+                    <p className="font-body text-sm text-ink/70 dark:text-ivory/70 mt-1">
                       {member.task}
                     </p>
                   </div>
@@ -110,12 +110,12 @@ const TeamMembersDialog = () => {
         </div>
         
         <div className="mt-6 pt-4 border-t border-burgundy/20 text-center">
-          <p className="font-serif text-sm text-ink/60 dark:text-ivory/60">
+          <p className="font-body text-sm text-ink/60 dark:text-ivory/60">
             Tổng cộng: <span className="font-semibold text-burgundy">11 thành viên</span>
           </p>
           <button
             onClick={() => setIsOpen(false)}
-            className="mt-4 px-6 py-2 bg-burgundy text-ivory rounded-lg hover:bg-burgundy/90 transition-colors font-serif"
+            className="mt-4 px-6 py-2 bg-burgundy text-ivory rounded-lg hover:bg-burgundy/90 transition-colors font-body"
           >
             Đóng thông báo
           </button>
