@@ -5,7 +5,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { X } from "lucide-react";
+
 
 interface TeamMember {
   name: string;
@@ -70,14 +70,6 @@ const TeamMembersDialog = () => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-ivory dark:bg-ink border-burgundy/20">
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-        >
-          <X className="h-5 w-5 text-burgundy" />
-          <span className="sr-only">Đóng</span>
-        </button>
-        
         <DialogHeader>
           <DialogTitle className="font-display text-2xl text-burgundy text-center mb-4">
             📜 Phân Công Thành Viên Nhóm
