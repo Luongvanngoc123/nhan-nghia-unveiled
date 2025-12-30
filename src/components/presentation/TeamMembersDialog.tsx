@@ -1,11 +1,11 @@
+import { useState, useEffect } from "react";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
-import { Users } from "lucide-react";
+import { X } from "lucide-react";
 
 interface TeamMember {
   name: string;
@@ -57,21 +57,30 @@ const teamData: TeamSection[] = [
 ];
 
 const TeamMembersDialog = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    // Auto open after a short delay for smooth experience
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <button
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 bg-burgundy text-ivory rounded-full shadow-lg hover:bg-burgundy/90 transition-all duration-300 hover:scale-105 group"
-          aria-label="Xem thành viên nhóm"
-        >
-          <Users className="w-5 h-5" />
-          <span className="font-serif text-sm">Thành viên nhóm</span>
-        </button>
-      </DialogTrigger>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-ivory dark:bg-ink border-burgundy/20">
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+        >
+          <X className="h-5 w-5 text-burgundy" />
+          <span className="sr-only">Đóng</span>
+        </button>
+        
         <DialogHeader>
           <DialogTitle className="font-display text-2xl text-burgundy text-center mb-4">
-            Phân Công Thành Viên Nhóm
+            📜 Phân Công Thành Viên Nhóm
           </DialogTitle>
         </DialogHeader>
         
@@ -104,6 +113,12 @@ const TeamMembersDialog = () => {
           <p className="font-serif text-sm text-ink/60 dark:text-ivory/60">
             Tổng cộng: <span className="font-semibold text-burgundy">11 thành viên</span>
           </p>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="mt-4 px-6 py-2 bg-burgundy text-ivory rounded-lg hover:bg-burgundy/90 transition-colors font-serif"
+          >
+            Đóng thông báo
+          </button>
         </div>
       </DialogContent>
     </Dialog>
