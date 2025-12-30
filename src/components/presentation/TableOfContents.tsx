@@ -44,15 +44,15 @@ const TableOfContents = () => {
   return (
     <section
       ref={containerRef}
-      className="py-24 md:py-32 bg-cream"
+      className="py-16 sm:py-24 md:py-32 bg-cream"
     >
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="font-display text-3xl md:text-4xl text-burgundy text-center mb-4">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-burgundy text-center mb-3 sm:mb-4">
           Mục Lục
         </h2>
-        <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-16" />
+        <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-10 sm:mb-16" />
 
-        <nav className="space-y-4">
+        <nav className="space-y-2 sm:space-y-4">
           {sections.map((section, index) => (
             <a
               key={section.id}
@@ -60,21 +60,21 @@ const TableOfContents = () => {
                 if (el) itemsRef.current[index] = el;
               }}
               href={`#${section.id}`}
-              className="group flex items-baseline gap-4 py-4 border-b border-border/50 hover:border-burgundy/30 transition-colors"
+              className="group flex items-baseline gap-2 sm:gap-4 py-3 sm:py-4 border-b border-border/50 hover:border-burgundy/30 transition-colors"
             >
-              <span className="font-display text-3xl text-burgundy/30 group-hover:text-burgundy transition-colors">
+              <span className="font-display text-xl sm:text-3xl text-burgundy/30 group-hover:text-burgundy transition-colors">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <div className="flex-1">
-                <h3 className="font-display text-xl text-ink group-hover:text-burgundy transition-colors">
+              <div className="flex-1 min-w-0">
+                <h3 className="font-display text-base sm:text-xl text-ink group-hover:text-burgundy transition-colors truncate">
                   {section.title}
                 </h3>
-                <p className="font-sans text-sm text-ink-light mt-1">
+                <p className="font-sans text-xs sm:text-sm text-ink-light mt-0.5 sm:mt-1 truncate">
                   {section.subtitle}
                 </p>
               </div>
               <svg
-                className="w-5 h-5 text-burgundy/30 group-hover:text-burgundy group-hover:translate-x-2 transition-all"
+                className="w-4 sm:w-5 h-4 sm:h-5 text-burgundy/30 group-hover:text-burgundy group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-all flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

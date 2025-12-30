@@ -69,29 +69,29 @@ const TeamMembersDialog = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-ivory dark:bg-ink border-burgundy/20">
+      <DialogContent className="w-[95vw] max-w-2xl max-h-[85vh] overflow-y-auto bg-ivory dark:bg-ink border-burgundy/20 p-4 sm:p-6">
         <DialogHeader>
-          <DialogTitle className="font-display text-2xl text-burgundy text-center mb-4">
+          <DialogTitle className="font-display text-lg sm:text-2xl text-burgundy text-center mb-2 sm:mb-4">
             📜 Phân Công Thành Viên Nhóm
           </DialogTitle>
         </DialogHeader>
         
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {teamData.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="border-l-4 border-burgundy/30 pl-4">
-              <h3 className="font-display text-lg text-burgundy mb-3">
+            <div key={sectionIndex} className="border-l-2 sm:border-l-4 border-burgundy/30 pl-3 sm:pl-4">
+              <h3 className="font-display text-sm sm:text-lg text-burgundy mb-2 sm:mb-3">
                 {section.title}
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {section.members.map((member, memberIndex) => (
                   <div
                     key={memberIndex}
-                    className="bg-parchment/50 dark:bg-ink/50 rounded-lg p-3 border border-burgundy/10"
+                    className="bg-cream/50 dark:bg-ink/50 rounded-lg p-2 sm:p-3 border border-burgundy/10"
                   >
-                    <p className="font-body font-semibold text-ink dark:text-ivory">
+                    <p className="font-body font-semibold text-ink dark:text-ivory text-sm sm:text-base">
                       {member.name}
                     </p>
-                    <p className="font-body text-sm text-ink/70 dark:text-ivory/70 mt-1">
+                    <p className="font-body text-xs sm:text-sm text-ink/70 dark:text-ivory/70 mt-0.5 sm:mt-1">
                       {member.task}
                     </p>
                   </div>
@@ -101,13 +101,13 @@ const TeamMembersDialog = () => {
           ))}
         </div>
         
-        <div className="mt-6 pt-4 border-t border-burgundy/20 text-center">
-          <p className="font-body text-sm text-ink/60 dark:text-ivory/60">
+        <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-burgundy/20 text-center">
+          <p className="font-body text-xs sm:text-sm text-ink/60 dark:text-ivory/60">
             Tổng cộng: <span className="font-semibold text-burgundy">11 thành viên</span>
           </p>
           <button
             onClick={() => setIsOpen(false)}
-            className="mt-4 px-6 py-2 bg-burgundy text-ivory rounded-lg hover:bg-burgundy/90 transition-colors font-body"
+            className="mt-3 sm:mt-4 px-4 sm:px-6 py-2 bg-burgundy text-ivory rounded-lg hover:bg-burgundy/90 transition-colors font-body text-sm sm:text-base"
           >
             Đóng thông báo
           </button>

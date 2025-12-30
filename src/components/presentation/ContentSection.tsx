@@ -58,7 +58,7 @@ const ContentSection = ({
     <section
       ref={sectionRef}
       id={id}
-      className={`py-20 md:py-32 ${bgClass} scroll-mt-20 relative overflow-hidden`}
+      className={`py-12 sm:py-20 md:py-32 ${bgClass} scroll-mt-16 sm:scroll-mt-20 relative overflow-hidden`}
     >
       {/* Background Image */}
       {backgroundImage && (
@@ -70,29 +70,29 @@ const ContentSection = ({
         </div>
       )}
       
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
-        <div ref={headerRef} className="relative mb-12">
-          <span className="font-display text-7xl md:text-8xl font-light text-burgundy/10 absolute -left-2 md:-left-8 -top-8 select-none">
+        <div ref={headerRef} className="relative mb-8 sm:mb-12">
+          <span className="font-display text-5xl sm:text-7xl md:text-8xl font-light text-burgundy/10 absolute -left-1 sm:-left-2 md:-left-8 -top-4 sm:-top-8 select-none">
             {number}
           </span>
           <div className="relative">
             {subtitle && (
-              <span className="font-sans text-xs tracking-[0.3em] uppercase text-gold mb-3 block">
+              <span className="font-sans text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-gold mb-2 sm:mb-3 block">
                 {subtitle}
               </span>
             )}
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-ink leading-tight">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-ink leading-tight">
               {title}
             </h2>
-            <div className="mt-6 w-16 h-0.5 bg-gradient-to-r from-burgundy to-burgundy/20" />
+            <div className="mt-4 sm:mt-6 w-12 sm:w-16 h-0.5 bg-gradient-to-r from-burgundy to-burgundy/20" />
           </div>
         </div>
 
         {/* Content */}
         <div
           ref={contentRef}
-          className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-ink prose-p:text-ink-light prose-p:leading-relaxed prose-strong:text-burgundy prose-blockquote:border-l-gold prose-blockquote:text-burgundy prose-blockquote:italic prose-blockquote:font-display"
+          className="prose prose-sm sm:prose-lg max-w-none prose-headings:font-display prose-headings:text-ink prose-p:text-ink-light prose-p:leading-relaxed prose-strong:text-burgundy prose-blockquote:border-l-gold prose-blockquote:text-burgundy prose-blockquote:italic prose-blockquote:font-display prose-p:text-sm sm:prose-p:text-base"
         >
           {children}
         </div>
