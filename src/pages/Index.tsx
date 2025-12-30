@@ -10,6 +10,15 @@ import QuoteCard from '@/components/presentation/QuoteCard';
 import KeyPointCard from '@/components/presentation/KeyPointCard';
 import Footer from '@/components/presentation/Footer';
 
+// Background images
+import bgSection1 from '@/assets/bg-section-1.jpg';
+import bgSection2 from '@/assets/bg-section-2.jpg';
+import bgSection3 from '@/assets/bg-section-3.jpg';
+import bgSection4 from '@/assets/bg-section-4.jpg';
+import bgSection5 from '@/assets/bg-section-5.jpg';
+import bgSection6 from '@/assets/bg-section-6.jpg';
+import bgSection7 from '@/assets/bg-section-7.jpg';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
@@ -39,6 +48,7 @@ const Index = () => {
         number="01"
         title="Phần Mở Đầu"
         subtitle="Lý do chọn đề tài"
+        backgroundImage={bgSection1}
       >
         <p>
           Lịch sử dân tộc Việt Nam là lịch sử của những cuộc đấu tranh dựng nước và giữ nước vĩ đại. 
@@ -88,6 +98,7 @@ const Index = () => {
         title="Cơ Sở Lý Luận"
         subtitle="Nho giáo nguyên thủy và bối cảnh lịch sử"
         variant="highlight"
+        backgroundImage={bgSection2}
       >
         <p>
           Trong học thuyết của <strong>Khổng Tử</strong> và <strong>Mạnh Tử</strong>, 
@@ -124,6 +135,7 @@ const Index = () => {
         number="03"
         title="Nhân Nghĩa Gắn Liền Với Chủ Nghĩa Yêu Nước"
         subtitle="Sự chuyển biến về chất"
+        backgroundImage={bgSection3}
       >
         <p>
           Khác với những nhà nho ẩn dật chỉ lo giữ mình trong sạch, Nguyễn Trãi là một nhà hành động. 
@@ -187,6 +199,7 @@ Vùi con đỏ xuống dưới hầm tai vạ."
         title="Tư Tưởng Thân Dân"
         subtitle="Lấy dân làm gốc của nhân nghĩa"
         variant="highlight"
+        backgroundImage={bgSection4}
       >
         <p>
           Nếu như gắn nhân nghĩa với yêu nước là một bước tiến, thì việc gắn nhân nghĩa với tư tưởng 
@@ -234,6 +247,7 @@ Vùi con đỏ xuống dưới hầm tai vạ."
         number="05"
         title="Khát Vọng Hòa Bình"
         subtitle="Đỉnh cao nhân văn"
+        backgroundImage={bgSection5}
       >
         <p>
           Lí tưởng nhân nghĩa của Nguyễn Trãi không chỉ dừng lại ở biên giới quốc gia hay tình thương 
@@ -290,6 +304,7 @@ Dân giàu đủ khắp đòi phương."
         title="Nghệ Thuật Thể Hiện"
         subtitle="Văn chương Nguyễn Trãi"
         variant="highlight"
+        backgroundImage={bgSection6}
       >
         <p>
           Tư tưởng lớn cần một hình thức nghệ thuật tương xứng để lan tỏa. 
@@ -342,6 +357,7 @@ Dân giàu đủ khắp đòi phương."
         number="07"
         title="Kết Luận"
         subtitle="Giá trị và bài học thời đại"
+        backgroundImage={bgSection7}
       >
         <p>
           Qua quá trình nghiên cứu và phân tích, có thể khẳng định: <strong>Tư tưởng nhân nghĩa 

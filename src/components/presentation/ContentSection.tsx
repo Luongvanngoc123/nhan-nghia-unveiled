@@ -11,6 +11,7 @@ interface ContentSectionProps {
   subtitle?: string;
   children: ReactNode;
   variant?: 'default' | 'highlight' | 'quote';
+  backgroundImage?: string;
 }
 
 const ContentSection = ({
@@ -20,6 +21,7 @@ const ContentSection = ({
   subtitle,
   children,
   variant = 'default',
+  backgroundImage,
 }: ContentSectionProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -56,9 +58,19 @@ const ContentSection = ({
     <section
       ref={sectionRef}
       id={id}
-      className={`py-20 md:py-32 ${bgClass} scroll-mt-20`}
+      className={`py-20 md:py-32 ${bgClass} scroll-mt-20 relative overflow-hidden`}
     >
-      <div className="max-w-4xl mx-auto px-6">
+      {/* Background Image */}
+      {backgroundImage && (
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        >
+          <div className="absolute inset-0 bg-ivory/90 dark:bg-ink/90" />
+        </div>
+      )}
+      
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div ref={headerRef} className="relative mb-12">
           <span className="font-display text-7xl md:text-8xl font-light text-burgundy/10 absolute -left-2 md:-left-8 -top-8 select-none">
