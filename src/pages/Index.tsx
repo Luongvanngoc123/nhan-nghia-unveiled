@@ -69,7 +69,7 @@ const Index = () => {
           source="Mục đích nghiên cứu"
         />
 
-        <div className="grid md:grid-cols-3 gap-4 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-6 sm:mt-8">
           <KeyPointCard
             number={1}
             title="Phân tích – Tổng hợp"
@@ -162,17 +162,17 @@ Lấy chí nhân để thay cường bạo."
           source="Bình Ngô Đại Cáo"
         />
 
-        <div className="grid md:grid-cols-2 gap-6 my-8">
-          <div className="bg-cream rounded-lg p-6 border-l-4 border-burgundy">
-            <h4 className="font-display text-xl text-burgundy mb-3">Phe ta</h4>
-            <p className="font-body text-ink-light">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 my-6 sm:my-8">
+          <div className="bg-cream rounded-lg p-4 sm:p-6 border-l-4 border-burgundy">
+            <h4 className="font-display text-lg sm:text-xl text-burgundy mb-2 sm:mb-3">Phe ta</h4>
+            <p className="font-body text-sm sm:text-base text-ink-light">
               <strong className="text-gold">Đại nghĩa, chí nhân</strong> — Tượng trưng cho chính nghĩa, 
               lòng yêu nước, bảo vệ dân.
             </p>
           </div>
-          <div className="bg-cream rounded-lg p-6 border-l-4 border-ink-light">
-            <h4 className="font-display text-xl text-ink mb-3">Phe địch</h4>
-            <p className="font-body text-ink-light">
+          <div className="bg-cream rounded-lg p-4 sm:p-6 border-l-4 border-ink-light">
+            <h4 className="font-display text-lg sm:text-xl text-ink mb-2 sm:mb-3">Phe địch</h4>
+            <p className="font-body text-sm sm:text-base text-ink-light">
               <strong>Hung tàn, cường bạo</strong> — Tượng trưng cho phi nghĩa, 
               xâm lược, cướp bóc.
             </p>
@@ -268,7 +268,7 @@ Thể lòng trời ta mở đường hiếu sinh."
           translation="Thuận theo đạo lý tự nhiên, tôn trọng sự sống, chừa cho kẻ thù một con đường sống"
         />
 
-        <div className="grid md:grid-cols-2 gap-6 my-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 my-6 sm:my-8">
           <KeyPointCard
             number={1}
             title="Tránh hy sinh"
@@ -312,15 +312,15 @@ Dân giàu đủ khắp đòi phương."
           và thơ đường luật để chuyển tải lí tưởng nhân nghĩa.
         </p>
 
-        <div className="space-y-8 mt-8">
-          <div className="bg-ivory rounded-lg p-6 border border-border">
-            <h4 className="font-display text-xl text-burgundy mb-4">
+        <div className="space-y-4 sm:space-y-8 mt-6 sm:mt-8">
+          <div className="bg-ivory rounded-lg p-4 sm:p-6 border border-border">
+            <h4 className="font-display text-lg sm:text-xl text-burgundy mb-2 sm:mb-4">
               Văn Chính Luận
             </h4>
-            <p className="font-sans text-sm text-gold tracking-wider uppercase mb-3">
+            <p className="font-sans text-xs sm:text-sm text-gold tracking-wider uppercase mb-2 sm:mb-3">
               Bình Ngô đại cáo, Quân trung từ mệnh tập
             </p>
-            <ul className="space-y-2 font-body text-ink-light">
+            <ul className="space-y-1 sm:space-y-2 font-body text-xs sm:text-base text-ink-light">
               <li>• Lối văn biền ngẫu mẫu mực, lập luận chặt chẽ</li>
               <li>• Giọng điệu đanh thép, hùng hồn</li>
               <li>• Các cặp câu đối xứng tạo âm hưởng hào sảng</li>
@@ -328,14 +328,14 @@ Dân giàu đủ khắp đòi phương."
             </ul>
           </div>
 
-          <div className="bg-ivory rounded-lg p-6 border border-border">
-            <h4 className="font-display text-xl text-burgundy mb-4">
+          <div className="bg-ivory rounded-lg p-4 sm:p-6 border border-border">
+            <h4 className="font-display text-lg sm:text-xl text-burgundy mb-2 sm:mb-4">
               Thơ Trữ Tình
             </h4>
-            <p className="font-sans text-sm text-gold tracking-wider uppercase mb-3">
+            <p className="font-sans text-xs sm:text-sm text-gold tracking-wider uppercase mb-2 sm:mb-3">
               Quốc âm thi tập, Ức Trai thi tập
             </p>
-            <ul className="space-y-2 font-body text-ink-light">
+            <ul className="space-y-1 sm:space-y-2 font-body text-xs sm:text-base text-ink-light">
               <li>• Vần thơ bình dị, mộc mạc</li>
               <li>• Sử dụng từ ngữ dân gian, tục ngữ, ca dao</li>
               <li>• Triết lý sâu xa được diễn tả gần gũi</li>
@@ -344,7 +344,7 @@ Dân giàu đủ khắp đòi phương."
           </div>
         </div>
 
-        <p className="text-lg font-display text-burgundy italic mt-8">
+        <p className="text-sm sm:text-lg font-display text-burgundy italic mt-6 sm:mt-8">
           Sự kết hợp giữa trí tuệ uyên bác của một nhà nho và tâm hồn nhạy cảm của một thi sĩ 
           đã giúp Nguyễn Trãi biến những khái niệm đạo đức trừu tượng thành những rung động thẩm mỹ 
           sâu sắc, có sức sống vượt thời gian.
@@ -364,7 +364,7 @@ Dân giàu đủ khắp đòi phương."
           là sợi chỉ đỏ xuyên suốt, là linh hồn trong toàn bộ di sản thơ văn của Nguyễn Trãi</strong>.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-4 my-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 my-6 sm:my-8">
           <KeyPointCard
             number={1}
             title="Yêu Nước"
@@ -385,16 +385,16 @@ Dân giàu đủ khắp đòi phương."
           />
         </div>
 
-        <h3 className="font-display text-2xl text-burgundy mt-12 mb-6">
+        <h3 className="font-display text-xl sm:text-2xl text-burgundy mt-8 sm:mt-12 mb-4 sm:mb-6">
           Bài học lịch sử và ý nghĩa thời đại
         </h3>
 
-        <div className="space-y-6">
-          <div className="bg-cream rounded-lg p-6 border-l-4 border-gold">
-            <h4 className="font-display text-lg text-ink mb-3">
+        <div className="space-y-4 sm:space-y-6">
+          <div className="bg-cream rounded-lg p-4 sm:p-6 border-l-4 border-gold">
+            <h4 className="font-display text-base sm:text-lg text-ink mb-2 sm:mb-3">
               Đối với công cuộc xây dựng đất nước
             </h4>
-            <p className="font-body text-ink-light">
+            <p className="font-body text-sm sm:text-base text-ink-light">
               Bài học <strong>"Lấy dân làm gốc"</strong> (Dân vi bản) vẫn là nguyên tắc vàng 
               trong quản lý xã hội hiện đại. "Việc nhân nghĩa cốt ở yên dân" ngày nay chính là 
               mục tiêu <em>"Dân giàu, nước mạnh, dân chủ, công bằng, văn minh"</em>.

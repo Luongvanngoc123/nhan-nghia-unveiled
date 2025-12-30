@@ -77,20 +77,20 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-ivory/60 via-transparent to-ivory/60" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pb-32">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pb-20 sm:pb-32">
         {/* Decorative Element */}
         <div
           ref={decorRef}
-          className="mx-auto mb-12 w-32 h-px bg-gradient-to-r from-transparent via-burgundy to-transparent origin-center"
+          className="mx-auto mb-6 sm:mb-12 w-24 sm:w-32 h-px bg-gradient-to-r from-transparent via-burgundy to-transparent origin-center"
         />
 
         {/* Main Title */}
         <h1
           ref={titleRef}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-ink leading-tight mb-8"
+          className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-ink leading-tight mb-4 sm:mb-8"
         >
-          <span className="block text-burgundy mb-2 drop-shadow-sm">Tư Tưởng Nhân Nghĩa</span>
-          <span className="block text-2xl md:text-3xl lg:text-4xl font-normal text-ink-light mt-4">
+          <span className="block text-burgundy mb-1 sm:mb-2 drop-shadow-sm">Tư Tưởng Nhân Nghĩa</span>
+          <span className="block text-lg sm:text-2xl md:text-3xl lg:text-4xl font-normal text-ink-light mt-2 sm:mt-4">
             Trong Thơ Văn Nguyễn Trãi
           </span>
         </h1>
@@ -98,21 +98,21 @@ const HeroSection = () => {
         {/* Subtitle */}
         <p
           ref={subtitleRef}
-          className="font-body text-lg md:text-xl text-ink-light max-w-3xl mx-auto leading-relaxed"
+          className="font-body text-base sm:text-lg md:text-xl text-ink-light max-w-3xl mx-auto leading-relaxed px-2"
         >
           Từ cốt lõi Nho gia đến chủ nghĩa yêu nước
-          <br className="hidden md:block" />
+          <br className="hidden sm:block" />
           và tinh thần nhân văn hiện thực
         </p>
 
         {/* Decorative Quote */}
-        <div className="mt-16 max-w-2xl mx-auto bg-ivory/80 backdrop-blur-sm rounded-lg p-6 border border-burgundy/10">
-          <blockquote className="font-display text-xl md:text-2xl italic text-burgundy/90">
+        <div className="mt-8 sm:mt-16 max-w-2xl mx-auto bg-ivory/80 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-burgundy/10">
+          <blockquote className="font-display text-lg sm:text-xl md:text-2xl italic text-burgundy/90">
             "Việc nhân nghĩa cốt ở yên dân,
             <br />
             Quân điếu phạt trước lo trừ bạo."
           </blockquote>
-          <cite className="block mt-4 font-sans text-sm text-ink-light tracking-wider uppercase">
+          <cite className="block mt-3 sm:mt-4 font-sans text-xs sm:text-sm text-ink-light tracking-wider uppercase">
             — Bình Ngô Đại Cáo
           </cite>
         </div>

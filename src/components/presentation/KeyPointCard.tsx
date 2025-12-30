@@ -40,15 +40,15 @@ const KeyPointCard = ({ number, title, description, delay = 0 }: KeyPointCardPro
   return (
     <div
       ref={cardRef}
-      className="group relative bg-ivory rounded-lg p-6 border border-border hover:border-burgundy/30 transition-all duration-300 hover:shadow-[var(--shadow-soft)]"
+      className="group relative bg-ivory rounded-lg p-4 sm:p-6 border border-border hover:border-burgundy/30 transition-all duration-300 hover:shadow-[var(--shadow-soft)]"
     >
-      <span className="font-display text-5xl font-light text-burgundy/20 group-hover:text-burgundy/40 transition-colors">
+      <span className="font-display text-3xl sm:text-5xl font-light text-burgundy/20 group-hover:text-burgundy/40 transition-colors">
         {String(number).padStart(2, '0')}
       </span>
-      <h4 className="font-display text-xl text-ink mt-2 group-hover:text-burgundy transition-colors">
+      <h4 className="font-display text-base sm:text-xl text-ink mt-1 sm:mt-2 group-hover:text-burgundy transition-colors">
         {title}
       </h4>
-      <p className="font-body text-sm text-ink-light mt-3 leading-relaxed">
+      <p className="font-body text-xs sm:text-sm text-ink-light mt-2 sm:mt-3 leading-relaxed">
         {description}
       </p>
     </div>
